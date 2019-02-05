@@ -7,7 +7,7 @@
     <link rel="icon" href="/includes/public/assets/images/favicon.ico" type="image/x-icon" />
     <link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/themes/smoothness/jquery-ui.css" rel="stylesheet" />
     <link href="css/foundation.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
     <link href="css/shared.css" rel="stylesheet" type="text/css" />
     <link href="css/search.css" rel="stylesheet" type="text/css" />
@@ -41,13 +41,32 @@
     <section class="header-slideshow">
         <div class="home-header">
             <div class="item">
-                <img src="includes/public/assets/images/header-slideshow1.jpg" />
+                <div class="img-cont">
+                    <picture>
+                        <source srcset="includes/public/assets/images/homeslide.png" media="(min-width: 641px)">
+                        <img src="includes/public/assets/images/homeslide-sm.png" alt="">
+                    </picture>
+                </div>
+                <div class="slide-content">
+                    <h2>Book now at Pavilion Hotel</h2>
+                    <p class="desc">
+                        Just 14 steps from the beach. <a href="/">Learn more</a>
+                    </p>
+                </div>
             </div>
             <div class="item">
-                <img src="includes/public/assets/images/header-slideshow2.jpg" />
-            </div>
-            <div class="item">
-                <img src="includes/public/assets/images/header-slideshow3.jpg" />
+                <div class="img-cont">
+                    <picture>
+                        <source srcset="includes/public/assets/images/homeslide.png" media="(min-width: 641px)">
+                        <img src="includes/public/assets/images/homeslide-sm.png" alt="">
+                    </picture>
+                </div>
+                <div class="slide-content">
+                    <h2>I am slide number two</h2>
+                    <p class="desc">
+                        Just 14 steps from the beach. <a href="/">Learn more</a>
+                    </p>
+                </div>
             </div>
         </div>      
     </section>
@@ -58,10 +77,9 @@
                 infinite: true,
                 arrows: true,
                 dots: true,
-                autoplay: true,
                 fade: true,
-                prevArrow: '<div class="arrow-cont"><div type="button" data-role="none" class="slick-prev" aria-label="previous"><img src="includes/public/assets/images/arrow-prev.png"/></div></div>',
-                nextArrow: '<div class="arrow-cont"><div type="button" data-role="none" class="slick-next" aria-label="next"><img src="includes/public/assets/images/arrow-next.png"/></div></div>'
+                prevArrow: '<div class="custom-arrow prev"><img src="includes/public/assets/images/homeslide-arrow.png" alt="arrow"></div>',
+                nextArrow: '<div class="custom-arrow next"><img src="includes/public/assets/images/homeslide-arrow.png" alt="arrow"></div>'
             });
 
             $(window).on('resize orientationchange', function() {
