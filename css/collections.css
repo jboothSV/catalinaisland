@@ -1,200 +1,225 @@
-/* Image Box */
-.imagebox {
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 20px;
-}
-.imagebox img {
-	display: block;
-	width: 100%;
-}
-.imagebox .link {
-	position: absolute;
-	bottom: 10px;
-	text-align: center;
-	width: 100%;
-}
-.imagebox a {
-	display: block;
-	padding: 0;	
-	text-align: center;
-}
-.imagebox a .title {
-	font-size: 18px;
-	line-height: 38px;
-	font-weight: 900;
-	text-transform: uppercase;
-}
-.imagebox a .desc {
-	font-size: 14px;
-	color: #343433;
-}
-@media only screen and (max-width: 64em) {
-	.imagebox {
-		max-width: 480px;
-	}
+.personas {
+    margin-bottom: 45px;
+    overflow: hidden;
 }
 
-/* Image Box Float Image Left of Content */
-.imagebox-float {
-	position: relative;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 20px;
-}
-.imagebox-float .img-cont,
-.imagebox-float .content {
-	float: left;
-	display: block;
-	box-sizing: border-box;
-}
-.imagebox-float .img-cont {}
-.imagebox-float .content { padding-left: 20px; }
-.imagebox-float .title {
-	font-size: 18px;
-	line-height: 38px;
-	font-weight: 900;
-	text-transform: uppercase;
-}
-.imagebox-float .desc {
-	font-size: 14px;
-	color: #343433;
-}
-.imagebox-float .desc a.link {
-	display: inline-block;
-}
-@media only screen and (max-width: 40em) {
-	.imagebox-float { text-align: center; }
-	.imagebox-float .content { padding-left: 0px; }
+.personas .inner-panel {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Image Box Wide - floated title */
-.imagebox-wide {
-	position: relative;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 20px;
-	width: 100%;
-}
-.imagebox-wide .title {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-	display: block;
-	background-color: rgba(0, 0, 0, 0.6);
-	padding: 10px 20px;
-}
-.imagebox-wide a .title {	
-	color: #fff;
-	font-size: 21px;
-	font-weight: 900;	
-}
-@media only screen and (max-width: 40em) {
-	.imagebox-wide a .title { font-size: 14px; }
-}
-
-/* Image Box Slider */
-.imagebox-slider {
-    margin-top: 30px;
-    margin-bottom: 40px;
-}
-.imagebox-slider .title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 35px;
-    margin-bottom: 20px;
-    color: #c9bea7;
-    text-align: center;
-    text-transform: uppercase;
-}
-.imagebox-slider .slides {
+.personas .item {
     position: relative;
-    margin: 0 -15px;
-}
-.imagebox-slider .slides .slide {
-    padding: 0 15px;
-}
-.imagebox-slider .slides .slide img {
-    display: block;
     width: 100%;
-    max-width: 510px;
-    margin: auto;
+    margin-bottom: 5px;
 }
-.imagebox-slider .slides .slide .title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 20px;
-    color: #c74d28;
-    margin: 10px auto;
-    max-width: 510px;
-}
-.imagebox-slider .slides .slide .desc { text-align: center; }
 
-.imagebox-slider .slides .arrow-cont { 
-    left: 50%;
+.personas .item .title {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 5px 15px;
+}
+
+.personas .item .title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00a9dd;
+    opacity: 0.75;
+    z-index: -1;
+}
+
+.personas .item .title h2 {
+    margin: 0 5px 0 0;
+    color: white;
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.personas .item .title img {
+    width: 15px;
+}
+
+.personas .item .img-cont {
+    padding-bottom: 60%;
+}
+
+@media (min-width: 641px) {
+    .personas .inner-panel {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 -3px;
+    }
+    .personas .item {
+        margin: 0 3px 6px;
+        width: calc(50% - 6px);
+    }
+}
+
+@media (min-width: 1025px) {
+    .personas {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto 50px;
+    }
+    .personas .inner-panel {
+        min-height: 1000px;
+    }
+    .personas .item .img-cont {
+        height: 100%;
+        padding-bottom: 50%;
+    }
+    @supports(display: grid) {
+        .personas .item .img-cont {
+            padding: 0;
+        }
+    }
+    .personas .item:first-child {
+        width: calc(60% - 6px);
+    }
+    .personas .item:nth-child(2) {
+        width: calc(40% - 6px);
+    }
+    .personas .item:nth-child(3) {
+        width: calc(70% - 6px);
+    }
+    .personas .item:last-child {
+        width: calc(30% - 6px);
+    }
+    .personas .item .title {
+        padding: 20px 60px;
+    }
+    .personas .item .title h2 {
+        font-size: 46px;
+        line-height: 50px;
+        margin: 0 15px 0 0;
+    }
+    .personas .item .title img {
+        width: auto;
+    }
+}
+
+/* end personas */
+
+.highlights {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.highlights .title-cont {
+    padding: 0 15px 15px;
+    text-align: center;
+}
+
+.highlights .title-cont h2 {
+    font-family: 'Roboto Condensed', Arial Narrow, sans-serif;
+    margin: 0;
+    text-transform: none;
+    font-size: 50px;
+    line-height: 56px;
+}
+
+.highlights .view-all {
+    display: inline-block;
+    margin: 20px auto 0;
+    padding: 3px 30px;
+    background-color: #ff8200;
+    border-radius: 22px;
+    text-align: center;
+    color: #003a48;
+}
+
+.highlights .slider {
+    position: relative;
+}
+
+.highlights .slider ul.slick-dots {
+    display: none !important;
+}
+
+.highlights .slider .arrow-cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 51%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.highlights .slider .arrow-cont .custom-arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00a9dd;
+    cursor: pointer;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    z-index: 9;
-}
-.imagebox-slider .slides .slick-prev,
-.imagebox-slider .slides .slick-next {
-    position: absolute;
-    top: 50%;    
-    z-index: 1;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    vertical-align: middle;    
     transform: translateY(-50%);
-    text-align: left;
-    color: #ce5323;
-}
-.imagebox-slider .slides .slick-prev { left: -15px; }
-.imagebox-slider .slides .slick-next { 
-    right: -15px; 
-    text-align: right;
+    z-index: 1;
+    pointer-events: all;
 }
 
-.imagebox-slider .slides .slick-prev:before,
-.imagebox-slider .slides .slick-next:before {
-    content: none;
+.highlights .slider .arrow-cont .custom-arrow.prev {
+    left: 10px;
 }
 
-@media only screen and (max-width: 1180px) {
-    .imagebox-slider .slides .slick-prev {
-        left: -10px;
-    }
-    .imagebox-slider .slides .slick-next {
-        right: -10px;
-    }
+.highlights .slider .arrow-cont .custom-arrow.prev img {
+    transform: rotate(180deg);
 }
-@media only screen and (max-width: 64em) {
-	.imagebox-slider .slides {
-        margin: 0;
-    }
-    .imagebox-slider .slides .slide {
-        padding: 0;
-    }
-    .imagebox-slider .slides .slick-prev {
-        left: 0;
-    }
-    .imagebox-slider .slides .slick-next {
-        right: 0;
-    }
+
+.highlights .slider .arrow-cont .custom-arrow.next {
+    right: 10px;
 }
-@media only screen and (max-width: 40em) {
-    .imagebox-slider .slides .slick-prev {
-        left: -10px;
+
+.highlights .item,
+.highlights .item .img-cont {
+    position: relative;
+}
+
+.highlights .item .img-cont img {
+    display: block;
+    width: 100%;
+}
+
+.highlights .item .slide-content {
+    text-align: center;
+    padding: 20px 30px;
+    background-color: #00a9dd;
+}
+
+.highlights .item .slide-content p,
+.highlights .item .slide-content a {
+    display: none;
+}
+
+.highlights .item .slide-content h3 {
+    color: white;
+    margin: 0;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+@media (min-width: 641px) {
+    .highlights {
+        overflow: hidden;
     }
-    .imagebox-slider .slides .slick-next {
-        right: -10px;
+    .highlights .slider {
+        margin: 0 -3px;
+    }
+    .highlights .item {
+        margin: 0 3px;
     }
 }
