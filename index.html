@@ -231,7 +231,7 @@
                 });
             </script>
         </div><!-- booking -->
-        <div class="intro-panel narrow">
+        <div class="intro-panel narrow centered">
             <h1>An Experience for Every Traveler</h1>
             <p>
                 No matter your mood or tastes, there's something on the island just for you.
@@ -288,7 +288,9 @@
                         <img src="includes/public/assets/images/highlight.png" alt="">
                     </div>
                     <div class="slide-content">
-                        <h3>catalina island zip line eco tours</h3>
+                        <div class="title-cont">
+                            <h3>catalina island zip line eco tours</h3>
+                        </div>
                         <p>
                             People are taking to the trees at Catalina Aerial Adventure, a unique and alluring outdoor experience.
                         </p>
@@ -300,7 +302,9 @@
                         <img src="includes/public/assets/images/highlight.png" alt="">
                     </div>
                     <div class="slide-content">
-                        <h3>catalina island zip line eco tours</h3>
+                        <div class="title-cont">
+                            <h3>catalina island zip line eco tours</h3>
+                        </div>
                         <p>
                             People are taking to the trees at Catalina Aerial Adventure, a unique and alluring outdoor experience.
                         </p>
@@ -312,7 +316,9 @@
                         <img src="includes/public/assets/images/highlight.png" alt="">
                     </div>
                     <div class="slide-content">
-                        <h3>catalina island zip line eco tours</h3>
+                        <div class="title-cont">
+                            <h3>catalina island zip line eco tours</h3>
+                        </div>
                         <p>
                             People are taking to the trees at Catalina Aerial Adventure, a unique and alluring outdoor experience.
                         </p>
@@ -324,7 +330,9 @@
                         <img src="includes/public/assets/images/highlight.png" alt="">
                     </div>
                     <div class="slide-content">
-                        <h3>catalina island zip line eco tours</h3>
+                        <div class="title-cont">
+                            <h3>catalina island zip line eco tours</h3>
+                        </div>
                         <p>
                             People are taking to the trees at Catalina Aerial Adventure, a unique and alluring outdoor experience.
                         </p>
@@ -336,7 +344,9 @@
                         <img src="includes/public/assets/images/highlight.png" alt="">
                     </div>
                     <div class="slide-content">
-                        <h3>catalina island zip line eco tours</h3>
+                        <div class="title-cont">
+                            <h3>catalina island zip line eco tours</h3>
+                        </div>
                         <p>
                             People are taking to the trees at Catalina Aerial Adventure, a unique and alluring outdoor experience.
                         </p>
@@ -365,13 +375,15 @@
                             {
                                 breakpoint: 1024,
                                 settings: {
-                                    slidesToShow: 2
+                                    slidesToShow: 2,
+                                    variableWidth: false
                                 }
                             },
                             {
                                 breakpoint: 640,
                                 settings: {
-                                    slidesToShow: 1
+                                    slidesToShow: 1,
+                                    variableWidth: false
                                 }
                             }
                         ]
@@ -384,6 +396,126 @@
                 });
             </script> 
         </div><!-- highlights -->
+        <div class="banner">
+            <div class="img-cont">
+                <picture>
+                    <source srcset="includes/public/assets/images/banner.png" media="(min-width: 641px)">
+                    <img src="includes/public/assets/images/banner-sm.png" alt="">
+                </picture>
+            </div>
+            <div class="slide-content">
+                <h2>There's a package just for you</h2>
+                <a href="/">Explore packages</a>
+            </div>
+        </div><!-- banner -->
+        <div class="imgbox-grid">
+            <div class="title-cont">
+                <h2>Island Experiences</h2>
+                <p>
+                    Choose from two distinct and beautiful sides of the island: <a href="/">Avalon</a> and <a href="/">Two Harbors</a>
+                </p>
+            </div>
+            <div class="inner-panel">
+                <div class="grid-item">
+                    <a href="/">
+                        <img src="includes/public/assets/images/imgbox-grid.png" alt="">
+                    </a>
+                    <div class="slide-content">
+                        <h3>avalon</h3>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <a href="/">
+                        <img src="includes/public/assets/images/imgbox-grid.png" alt="">
+                    </a>
+                    <div class="slide-content">
+                        <h3>two harbors</h3>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div><!-- imgbox grid -->
+        <div class="callout">
+            <h4 class="title">
+                <span class="title1">ready for</span>
+                <span class="title2">the perfect island experience?</span>
+            </h4>
+            <a href="/">book now</a>
+        </div><!-- callout -->
+        <div class="map-widget" style="background:url('includes/public/assets/images/map-bg.png')center/cover no-repeat;">
+            <div class="map-cont" style="background:url('includes/public/assets/images/island-map.png')top right/contain no-repeat;"></div>
+            <div class="map-content">
+                <h2>Getting Here</h2>
+                <p>
+                    Is easier than you may think.
+                </p>
+                <span class="link">
+                    <a href="/">Learn how</a>
+                </span>
+            </div>
+        </div><!-- map widget -->
+        <div class="social-panel">
+            <style>
+                .social-panel {
+                    margin: 0 auto 30px;
+                    width: 100%;
+                    max-width: 1440px;
+                }
+                .social-panel .title-cont {
+                    padding: 0 20px 15px;
+                    text-align: center;
+                }
+                .social-panel .title-cont a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 22px;
+                    line-height: 22px;
+                    font-weight: 400;
+                    color: #003a48;
+                }
+                .social-panel .title-cont a i {
+                    color: #003a48;
+                    font-size: 32px;
+                    margin-right: 5px;
+                }
+                @media (min-width: 1025px) {
+                    .social-panel {
+                        margin: 0 auto 70px;
+                    }
+                    .social-panel .title-cont a {
+                        font-size: 24px;
+                        line-height: 24px;
+                    }
+                    .social-panel .title-cont a i {
+                        font-size: 34px;
+                    }
+                }
+            </style>
+            <div class="title-cont">
+                <a href="/">
+                    <i class="fab fa-instagram"></i>
+                    @VisitCatalinaIsland
+                </a>
+            </div>
+            <img style="display:block;width:100%;" class="show-for-small-only" src="includes/public/assets/images/social-sm.png" alt="">
+            <img style="display:block;width:100%;" class="hide-for-small-only" src="includes/public/assets/images/social.png" alt="">
+        </div><!-- social panel -->
+        <div class="accolade">
+            <div class="badge">
+                <img src="includes/public/assets/images/badge.png" alt="">
+            </div>
+            <div class="slide-content">
+                <span>voted</span>
+                <h3>best california island experience</h3>
+                <span>By Name of Travel Authority</span>
+            </div>
+        </div><!-- accolade -->
     </section>
 
     <!-- /////  FOOTER INCLUDE  ////// -->

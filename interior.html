@@ -7,17 +7,18 @@
     <link rel="icon" href="/includes/public/assets/images/favicon.ico" type="image/x-icon" />
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/themes/smoothness/jquery-ui.css" rel="stylesheet" />
     <link href="css/foundation.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css"/>
     <link href="css/shared.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
     <link href="css/search.css" rel="stylesheet" type="text/css" />
-    <link href="css/slideshow-int.css" rel="stylesheet" type="text/css" />
+    <link href="css/slideshow.css" rel="stylesheet" type="text/css" />
     <link href="css/collections.css" rel="stylesheet" type="text/css" />
     <link href="css/nav-shared.css" rel="stylesheet" type="text/css" />
     <link href="css/social.css" rel="stylesheet" type="text/css" />
     <link href="css/shared-form.css" rel="stylesheet" type="text/css" />
     <link href="css/booking.css" rel="stylesheet" type="text/css" />
     <link href="css/add-this.css" rel="stylesheet" type="text/css" />
+    <link href="css/enews.css" rel="stylesheet" type="text/css" />
 
     <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
@@ -26,7 +27,7 @@
     <script type="text/javascript" src="js/foundation.equalizer.js"></script>
     <script type="text/javascript" src="js/jquery.onscreen.js"></script>
 
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
     <!-- CUSTOM FONTS CODE -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Roboto+Condensed:700" rel="stylesheet">
@@ -39,15 +40,421 @@
     <div w3-include-html="header.html"></div>
 
     <!-- ////// HEADER SLIDESHOW //////// -->
-    <section class="header-slideshow-int">
-        <div class="imgcont">
-            <img src="includes/public/assets/images/interior-header.jpg" />
-        </div>      
-    </section>
+    <div class="header-slideshow">
+        <div class="home-header">
+            <div class="item">
+                <div class="img-cont">
+                    <picture>
+                        <source srcset="includes/public/assets/images/interior-slideshow.png" media="(min-width: 641px)">
+                        <img src="includes/public/assets/images/homeslide-sm.png" alt="">
+                    </picture>
+                </div>
+                <div class="slide-content">
+                    <h2>A package makes the perfect gift</h2>
+                    <p class="desc">
+                        Book online for best rates. <a href="/">Learn more</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- //////  BODY  //////// -->
     <section class="content">
+        <div class="booking active">
+            <div class="top-section">
+                <div class="inner">
+                    <div class="title-bar">
+                        <h2>Book Your Trip</h2>
+                        <div class="toggle">
+                            <span class="open">OPEN</span>
+                            <span class="close">CLOSE</span>
+                            <img src="includes/public/assets/images/booking-arrow.png" alt="arrow">
+                        </div>
+                    </div>
+                    <div class="options">
+                        <span class="selected">Hotels</span>
+                        <span>Activities</span>
+                        <span>Moorings</span>
+                        <span>Camping</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-section">
+                <form action="/" method="GET" class="booking-form">
+                    <label class="select-label">
+                        Hotel Reservations
+                        <select name="types">
+                            <option value="Value default" selected>Select...</option>
+                            <option value="Value One">Value One</option>
+                            <option value="Value Two">Value Two</option>
+                            <option value="Value Three">Value Three</option>
+                        </select>
+                        <div class="arrow">
+                            <img src="includes/public/assets/images/orange-arrow.png" alt="orange arrow">
+                        </div>
+                    </label>
+                    <label class="date-label">
+                        Dates 
+                        <input type="date">
+                        <div class="overlay">
+                            <i class="far fa-calendar-alt"></i>
+                        </div>
+                    </label>
+                    <label class="number-label">
+                        Rooms
+                        <div class="inner">
+                            <div class="minus">
+                                <i class="fas fa-minus"></i>
+                            </div>
+                            <input type="text" placeholder="0">
+                            <div class="plus">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="number-label center-item">
+                        Adults
+                        <div class="inner">
+                            <div class="minus">
+                                <i class="fas fa-minus"></i>
+                            </div>
+                            <input type="text" placeholder="0">
+                            <div class="plus">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                    </label>
+                    <label class="number-label">
+                        Children
+                        <div class="inner">
+                            <div class="minus">
+                                <i class="fas fa-minus"></i>
+                            </div>
+                            <input type="text" placeholder="0">
+                            <div class="plus">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                    </label>
+                    <div class="submit">Check availability</div>
+                </form>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    var root = $(".booking");
+                    var toggle = root.find(".toggle");
+                    var form = root.find("form");
+                    var select = root.find("select");
+                    var addVal = root.find(".plus");
+                    var removeVal = root.find(".minus");
+                    var current = 0;
+                    var submit = root.find(".submit");
+                    var opts = root.find(".options");
+                    var body = root.find(".bottom-section");
+                    var opt = opts.find("span");
+
+                    toggle.on("click", function(){
+                        root.toggleClass("active");
+                        if(root.hasClass("active")){
+                            opts.slideDown(function(){
+                                body.slideDown()
+                            });
+                        }else{
+                            opts.slideUp(function(){
+                                body.slideUp();
+                            });
+                        }
+                    });
+
+                    select.on("click", function(){
+                        $(this).parent().toggleClass("active");
+                    });
+                    select.off("click", function(){
+                        $(this).parent().toggleClass("active");
+                    });
+
+                    addVal.on("click", function(){
+                        var input = $(this).parent().parent().find("input");
+                        current += 1;
+                        input.val(current);
+                    });
+
+                    removeVal.on("click", function(){
+                        if(current === 0) {
+                            return;
+                        }
+                        var input = $(this).parent().parent().find("input");
+                        current -= 1;
+                        input.val(current);
+                    });
+
+                    opt.on("click", function(){
+                        opt.not($(this)).removeClass("selected");
+                        $(this).addClass("selected");
+                    });
+
+                    submit.on("click", function(){
+                        form.submit();
+                    });
+                });
+            </script>
+        </div><!-- booking -->
+        <div class="intro-panel">
+            <h1>Packages</h1>
+            <h2>Lodging</h2>
+            <p>
+                We provide a variety of Catalina Island hotel and lodging packages in both Avalon and Two Harbors. Packages combine Catalina Island hotel stays with one or more of our signature activities or adventures. Packages change throughout the year, so check back to find the perfect package for your next adventure to Catalina Island.u.
+            </p>
+        </div><!-- intro panel -->
+        <div class="feat-slider" data-feat-slider1><!-- remove data attr for production. Only used in cutup because there are two sliders on same page -->
+            <div class="dots-cont"></div>
+            <div class="slider">
+                <div class="arrow-cont"></div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Boat &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Helicopter &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Boat &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Boat &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Boat &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    var root = $("[data-feat-slider1]");
+                    var slider = root.find(".slider");
+                    var arrows = root.find(".arrow-cont");
+                    var dotCont = root.find(".dots-cont");
+
+                    slider.slick({
+                        infinite: true,
+                        arrows: true,
+                        dots: true,
+                        appendDots: dotCont,
+                        prevArrow: '<div class="custom-arrow prev"><img src="includes/public/assets/images/homeslide-arrow.png" alt="arrow"></div>',
+                        nextArrow: '<div class="custom-arrow next"><img src="includes/public/assets/images/homeslide-arrow.png" alt="arrow"></div>',
+                        appendArrows: arrows,
+                        slide: ".item",
+                        slidesToShow: 3,
+                        responsive: [
+                            {
+                                breakpoint: 1024,
+                                settings: {
+                                    slidesToShow: 2
+                                }
+                            },
+                            {
+                                breakpoint: 640,
+                                settings: {
+                                    slidesToShow: 1
+                                }
+                            }
+                        ]
+                    });
         
+                    $(window).on('resize orientationchange', function() {
+                        slider.slick('resize');
+                    });
+        
+                });
+            </script> 
+        </div><!-- featured slider -->
+        <div class="feat-slider" data-feat-slider2><!-- remove data attr for production. Only used in cutup because there are two sliders on same page -->
+            <div class="title-cont">
+                <h2>activities &amp; adventures</h2>
+                <p>
+                    Adventure is waiting for you about an hour off the Southern California coast on Catalina Island. Whatever activities and adventures you choose, we hope you enjoy your experience on Catalina, California’s Island Escape. 
+                </p>
+            </div>
+            <div class="dots-cont"></div>
+            <div class="slider">
+                <div class="arrow-cont"></div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Boat &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Helicopter &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Boat &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Boat &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Boat &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    var root = $("[data-feat-slider2]");
+                    var slider = root.find(".slider");
+                    var arrows = root.find(".arrow-cont");
+                    var dotCont = root.find(".dots-cont");
+
+                    slider.slick({
+                        infinite: true,
+                        arrows: true,
+                        dots: true,
+                        appendDots: dotCont,
+                        prevArrow: '<div class="custom-arrow prev"><img src="includes/public/assets/images/homeslide-arrow.png" alt="arrow"></div>',
+                        nextArrow: '<div class="custom-arrow next"><img src="includes/public/assets/images/homeslide-arrow.png" alt="arrow"></div>',
+                        appendArrows: arrows,
+                        slide: ".item",
+                        slidesToShow: 3,
+                        responsive: [
+                            {
+                                breakpoint: 1024,
+                                settings: {
+                                    slidesToShow: 2
+                                }
+                            },
+                            {
+                                breakpoint: 640,
+                                settings: {
+                                    slidesToShow: 1
+                                }
+                            }
+                        ]
+                    });
+        
+                    $(window).on('resize orientationchange', function() {
+                        slider.slick('resize');
+                    });
+        
+                });
+            </script> 
+        </div><!-- featured slider -->
+        <div class="two-col-highlights">
+            <div class="inner-panel">
+                <div class="item">
+                    <a href="/">
+                        <picture>
+                            <source srcset="includes/public/assets/images/two-col-highlight.png" media="(min-width: 641px)">
+                            <img src="includes/public/assets/images/two-col-hightlight-sm.png" alt="">
+                        </picture>
+                    </a>
+                    <div class="slide-content">
+                        <a href="/"><h3>Camping &amp; Boating</h3></a>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="/">
+                        <picture>
+                            <source srcset="includes/public/assets/images/two-col-highlight.png" media="(min-width: 641px)">
+                            <img src="includes/public/assets/images/two-col-hightlight-sm.png" alt="">
+                        </picture>
+                    </a>
+                    <div class="slide-content">
+                        <a href="/"><h3>Camping &amp; Boating</h3></a>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     
     <!-- /////  FOOTER INCLUDE  ////// -->
@@ -59,53 +466,16 @@
 
 <script type="text/javascript" src="js/nav.js"></script>
 
-<script>
-    var root = $('[data-guid="{{guid}}"]');
-    $(document).foundation();                
-    
-    var interiorNav = $('[data-guid="interior-nav"]');
-    var toggle = interiorNav.find('.toggle');
-    var menu = interiorNav.find('.menu');
-    var submenuButtons = interiorNav.find('.open-submenu');
-    toggle.click(function() {
-        menu.slideToggle();
-        return false;
-    });
-    submenuButtons.click(function() {
-        var button = $(this);
-        var submenu = button.next('ul');
-        button.toggleClass('open');
-        submenu.slideToggle(function() {
-            submenu.toggleClass('open');
-        });
-        return false;
-    });                                             
-</script>
-
 <script type="text/javascript">
-
-    //Weather 
-
-    $('body').on('click', '[data-sv-weathercont]', function() {
-        $('[data-sv-weatherdd]').toggleClass('active');
-        $('[data-sv-weathercont]').toggleClass('active');
+    $(document).ready(function(){
+        $("body").on("click", "[data-open-primarysearch]", function(){
+            $(".primary-search").parent().addClass("active");
+        });
+        $("body").on("click", "[data-close-primarysearch]", function(e){
+            e.stopPropagation();
+            $(".primary-search").parent().removeClass("active");
+        });
     });
-
-    //Search specific 
-
-     $('body').on('click', '[data-sv-sitesearch-icon]', function() {
-        $('[data-sv-sitesearchdd]').toggleClass('active');
-    });
-     $('body').on('click','[data-sv-sitesearchdd]', function() {
-        $(this).toggleClass('active');
-    });
-     $('body').on('click','[data-sv-sitesearchmobile]', function() {
-        $('[data-sv-sitesearchddmobile]').toggleClass('active');
-    });
-     $('body').on('click','[data-sv-searchclosemobile]', function() {
-        $('[data-sv-sitesearchddmobile]').toggleClass('active');
-    });
-    
 </script>
 
 </body>

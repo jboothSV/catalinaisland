@@ -64,6 +64,7 @@ body {
     background-color: white;
     font-family: 'Montserrat', sans-serif;
     color: #595959;
+    overflow-x: hidden;
 }
 
 a,
@@ -489,6 +490,18 @@ a.shared-button {
     max-width: 715px;
     margin: 0 auto;
     padding: 35px 20px;
+    text-align: center;
+}
+
+.intro-panel.centered {
+    text-align: center;
+}
+
+.intro-panel p {
+    text-align: left;
+}
+
+.intro-panel.centered p {
     text-align: center;
 }
 

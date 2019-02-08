@@ -116,7 +116,6 @@
         bottom: 60px;
         transform: translate(-50%, 0);
         padding: 0 15px;
-        max-width: 700px;
     }
     .header-slideshow .item .slide-content h2 {
         font-size: 46px;
