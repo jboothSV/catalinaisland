@@ -71,13 +71,16 @@
     background-color: #f2f2f2;
 }
 
-.booking .options span {
+.booking .options a {
     position: relative;
     display: inline-block;
     padding: 0 5px;
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
 }
 
-.booking .options span.selected::after {
+.booking .options a.selected::after {
     content: "";
     position: absolute;
     bottom: -5px;
@@ -343,11 +346,11 @@
     .booking .options {
         font-size: 16px;
     }
-    .booking .options span {
+    .booking .options a {
         margin-right: 25px;
         cursor: pointer;
     }
-    .booking .options span.selected::after {
+    .booking .options a.selected::after {
         bottom: -10px;
         height: 4px;
     }

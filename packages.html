@@ -201,124 +201,15 @@
             </script>
         </div><!-- booking -->
         <div class="intro-panel">
-            <h1>Packages</h1>
-            <h2>Lodging</h2>
-            <p>
-                We provide a variety of Catalina Island hotel and lodging packages in both Avalon and Two Harbors. Packages combine Catalina Island hotel stays with one or more of our signature activities or adventures. Packages change throughout the year, so check back to find the perfect package for your next adventure to Catalina Island.u.
-            </p>
-        </div><!-- intro panel -->
-        <div class="feat-slider" data-feat-slider1><!-- remove data attr for production. Only used in cutup because there are two sliders on same page -->
-            <div class="dots-cont"></div>
-            <div class="slider">
-                <div class="arrow-cont"></div>
-                <div class="item">
-                    <img src="includes/public/assets/images/feat-slider.png" alt="">
-                    <div class="slide-content">
-                        <h5>Boat &amp; Hotel Package</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
-                        </p>
-                        <span class="link">
-                            <a href="/">Learn More</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="includes/public/assets/images/feat-slider.png" alt="">
-                    <div class="slide-content">
-                        <h5>Helicopter &amp; Hotel Package</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
-                        </p>
-                        <span class="link">
-                            <a href="/">Learn More</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="includes/public/assets/images/feat-slider.png" alt="">
-                    <div class="slide-content">
-                        <h5>Boat &amp; Hotel Package</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
-                        </p>
-                        <span class="link">
-                            <a href="/">Learn More</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="includes/public/assets/images/feat-slider.png" alt="">
-                    <div class="slide-content">
-                        <h5>Boat &amp; Hotel Package</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
-                        </p>
-                        <span class="link">
-                            <a href="/">Learn More</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="includes/public/assets/images/feat-slider.png" alt="">
-                    <div class="slide-content">
-                        <h5>Boat &amp; Hotel Package</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
-                        </p>
-                        <span class="link">
-                            <a href="/">Learn More</a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <script>
-                $(document).ready(function(){
-                    var root = $("[data-feat-slider1]");
-                    var slider = root.find(".slider");
-                    var arrows = root.find(".arrow-cont");
-                    var dotCont = root.find(".dots-cont");
-
-                    slider.slick({
-                        infinite: true,
-                        arrows: true,
-                        dots: true,
-                        appendDots: dotCont,
-                        prevArrow: '<div class="custom-arrow prev"><img src="includes/public/assets/images/homeslide-arrow.png" alt="arrow"></div>',
-                        nextArrow: '<div class="custom-arrow next"><img src="includes/public/assets/images/homeslide-arrow.png" alt="arrow"></div>',
-                        appendArrows: arrows,
-                        slide: ".item",
-                        slidesToShow: 3,
-                        responsive: [
-                            {
-                                breakpoint: 1024,
-                                settings: {
-                                    slidesToShow: 2
-                                }
-                            },
-                            {
-                                breakpoint: 640,
-                                settings: {
-                                    slidesToShow: 1
-                                }
-                            }
-                        ]
-                    });
-        
-                    $(window).on('resize orientationchange', function() {
-                        slider.slick('resize');
-                    });
-        
-                });
-            </script> 
-        </div><!-- featured slider -->
-        <div class="feat-slider" data-feat-slider2><!-- remove data attr for production. Only used in cutup because there are two sliders on same page -->
-            <div class="title-cont">
-                <h2>activities &amp; adventures</h2>
-                <p>
-                    Adventure is waiting for you about an hour off the Southern California coast on Catalina Island. Whatever activities and adventures you choose, we hope you enjoy your experience on Catalina, California’s Island Escape. 
+            <div class="contentRender_name_plugins_core_textbox">
+                <h1>Packages</h1>
+                <h2>Lodging</h2>
+                <p style="text-align:left;">
+                    We provide a variety of Catalina Island hotel and lodging packages in both Avalon and Two Harbors. Packages combine Catalina Island hotel stays with one or more of our signature activities or adventures. Packages change throughout the year, so check back to find the perfect package for your next adventure to Catalina Island.u.
                 </p>
             </div>
+        </div><!-- intro panel -->
+        <div class="carousel" data-carousel1><!-- remove data attr for production. Only used in cutup because there are two sliders on same page -->
             <div class="dots-cont"></div>
             <div class="slider">
                 <div class="arrow-cont"></div>
@@ -385,7 +276,7 @@
             </div>
             <script>
                 $(document).ready(function(){
-                    var root = $("[data-feat-slider2]");
+                    var root = $("[data-carousel1]");
                     var slider = root.find(".slider");
                     var arrows = root.find(".arrow-cont");
                     var dotCont = root.find(".dots-cont");
@@ -423,38 +314,147 @@
                 });
             </script> 
         </div><!-- featured slider -->
-        <div class="two-col-highlights">
-            <div class="inner-panel">
-                <div class="item">
-                    <a href="/">
-                        <picture>
-                            <source srcset="includes/public/assets/images/two-col-highlight.png" media="(min-width: 641px)">
-                            <img src="includes/public/assets/images/two-col-hightlight-sm.png" alt="">
-                        </picture>
-                    </a>
-                    <div class="slide-content">
-                        <a href="/"><h3>Camping &amp; Boating</h3></a>
-                        <span class="link">
-                            <a href="/">Learn More</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="/">
-                        <picture>
-                            <source srcset="includes/public/assets/images/two-col-highlight.png" media="(min-width: 641px)">
-                            <img src="includes/public/assets/images/two-col-hightlight-sm.png" alt="">
-                        </picture>
-                    </a>
-                    <div class="slide-content">
-                        <a href="/"><h3>Camping &amp; Boating</h3></a>
-                        <span class="link">
-                            <a href="/">Learn More</a>
-                        </span>
-                    </div>
+        <div class="panel-one-col">
+            <div class="intro-panel">
+                <div class="contentRender_name_plugins_core_textbox">
+                    <h2>activities &amp; adventures</h2>
+                    <p style="text-align:left;">
+                        Adventure is waiting for you about an hour off the Southern California coast on Catalina Island. Whatever activities and adventures you choose, we hope you enjoy your experience on Catalina, California’s Island Escape. 
+                    </p>
                 </div>
             </div>
         </div>
+        <div class="carousel" data-carousel2><!-- remove data attr for production. Only used in cutup because there are two sliders on same page -->
+            <div class="dots-cont"></div>
+            <div class="slider">
+                <div class="arrow-cont"></div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Boat &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Helicopter &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Boat &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Boat &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="includes/public/assets/images/feat-slider.png" alt="">
+                    <div class="slide-content">
+                        <h5>Boat &amp; Hotel Package</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...  
+                        </p>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    var root = $("[data-carousel2]");
+                    var slider = root.find(".slider");
+                    var arrows = root.find(".arrow-cont");
+                    var dotCont = root.find(".dots-cont");
+
+                    slider.slick({
+                        infinite: true,
+                        arrows: true,
+                        dots: true,
+                        appendDots: dotCont,
+                        prevArrow: '<div class="custom-arrow prev"><img src="includes/public/assets/images/homeslide-arrow.png" alt="arrow"></div>',
+                        nextArrow: '<div class="custom-arrow next"><img src="includes/public/assets/images/homeslide-arrow.png" alt="arrow"></div>',
+                        appendArrows: arrows,
+                        slide: ".item",
+                        slidesToShow: 3,
+                        responsive: [
+                            {
+                                breakpoint: 1024,
+                                settings: {
+                                    slidesToShow: 2
+                                }
+                            },
+                            {
+                                breakpoint: 640,
+                                settings: {
+                                    slidesToShow: 1
+                                }
+                            }
+                        ]
+                    });
+        
+                    $(window).on('resize orientationchange', function() {
+                        slider.slick('resize');
+                    });
+        
+                });
+            </script> 
+        </div><!-- featured slider -->
+        <div class="tiles">
+            <div class="inner-panel">
+                <div class="tile">
+                    <a href="/">
+                        <img src="includes/public/assets/images/imgbox-grid.png" alt="">
+                    </a>
+                    <div class="slide-content">
+                        <h3>avalon</h3>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="tile">
+                    <a href="/">
+                        <img src="includes/public/assets/images/imgbox-grid.png" alt="">
+                    </a>
+                    <div class="slide-content">
+                        <h3>two harbors</h3>
+                        <span class="link">
+                            <a href="/">Learn More</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div><!-- tiles -->
     </section>
     
     <!-- /////  FOOTER INCLUDE  ////// -->

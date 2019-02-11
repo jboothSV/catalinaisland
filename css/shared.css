@@ -204,10 +204,7 @@ ul, ol, dl {
     table tr td, 
     a:link, 
     a:visited, 
-    a:active, 
-    ul, 
-    ol, 
-    dl {
+    a:active {
         font-size: 16px;
         line-height: 22px;
     }
@@ -219,7 +216,6 @@ ul, ol, dl {
         line-height: 26px;
     }
 }
-ul { margin-left: 1.8em; }
 
 ::-webkit-input-placeholder {
     color: #c9bea7;
@@ -227,13 +223,11 @@ ul { margin-left: 1.8em; }
 }
 :-moz-placeholder {
     /* Firefox 18- */
-    
     color: #c9bea7;
     opacity: 1;
 }
 ::-moz-placeholder {
     /* Firefox 19+ */
-    
     color: #c9bea7;
     opacity: 1;
 }
@@ -244,22 +238,16 @@ ul { margin-left: 1.8em; }
 
 .shared-button,
 a.shared-button {
-    display: inline-block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #ff8200;
+    color: #003b4a;
+    font-size: 17px;
     font-weight: 600;
-    color: #003b49;
-    padding: 6px 32px;
-    border-radius: 20px;
-    border: 2px solid #24b9f1;
-}
-
-@media (min-width: 1025px) {
-    .shared-button,
-    a.shared-button {
-        font-size: 16px;
-        padding: 7px 32px;
-    }
+    text-transform: uppercase;
+    margin: 0 auto;
 }
 
 /*
@@ -341,6 +329,12 @@ a.shared-button {
     font-weight: 600;
 }
 
+.header-section .weather-cont a {
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+}
+
 .header-section .top-header .weather-cont {
     font-size: 14px;
     margin-right: 15px;
@@ -359,7 +353,7 @@ a.shared-button {
     text-align: right;
 }
 
-.header-section .header-right-mobile .booking-link {
+.header-section .header-right-mobile .cta-button {
     position: relative;
     padding: 5px 15px;
     display: inline-flex;
@@ -375,7 +369,7 @@ a.shared-button {
     z-index: 1;
 }
 
-.header-section .top-header .booking-link {
+.header-section .top-header .cta-button {
     padding: 10px 18px;
     display: inline-flex;
     justify-content: center;
@@ -391,11 +385,11 @@ a.shared-button {
 }
 
 @media (min-width: 1250px) {
-    .header-section .top-header .booking-link {
+    .header-section .top-header .cta-button {
         font-size: 17px;
     }
     .header-section .top-header .weather-cont,
-    .header-section .top-header .booking-link {
+    .header-section .top-header .cta-button {
         margin-right: 35px;
     }
 }
@@ -460,6 +454,11 @@ a.shared-button {
     width: 100%;
 }
 
+.content hr {
+    border: 1px solid #959595;
+    margin: 10px 0;
+}
+
 .controlled-width {
     width: 100%;
     max-width: 1440px;
@@ -478,7 +477,7 @@ a.shared-button {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 15px 15px;
+    padding: 0 15px;
 }
 
 .contentRender_name_plugins_core_textbox .contentRender_name_plugins_core_textbox {
@@ -487,26 +486,10 @@ a.shared-button {
 
 .intro-panel {
     width: 100%;
-    max-width: 715px;
+    max-width: 840px;
     margin: 0 auto;
-    padding: 35px 20px;
     text-align: center;
-}
-
-.intro-panel.centered {
-    text-align: center;
-}
-
-.intro-panel p {
-    text-align: left;
-}
-
-.intro-panel.centered p {
-    text-align: center;
-}
-
-.intro-panel.narrow {
-    max-width: 530px;
+    padding: 0 0 25px;
 }
 
 .intro-panel .intro-panel {

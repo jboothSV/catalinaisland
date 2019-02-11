@@ -104,10 +104,10 @@
                         </div>
                     </div>
                     <div class="options">
-                        <span class="selected">Hotels</span>
-                        <span>Activities</span>
-                        <span>Moorings</span>
-                        <span>Camping</span>
+                        <a href="#" class="selected">Hotels</a>
+                        <a href="#">Activities</a>
+                        <a href="#">Moorings</a>
+                        <a href="#">Camping</a>
                     </div>
                 </div>
             </div>
@@ -231,13 +231,15 @@
                 });
             </script>
         </div><!-- booking -->
-        <div class="intro-panel narrow centered">
-            <h1>An Experience for Every Traveler</h1>
-            <p>
-                No matter your mood or tastes, there's something on the island just for you.
-            </p>
+        <div class="intro-panel">
+            <div class="contentRender_name_plugins_core_textbox">
+                <h1>An Experience for Every Traveler</h1>
+                <p>
+                    No matter your mood or tastes, there's something on the island just for you.
+                </p>
+            </div>
         </div><!-- intro panel -->
-        <div class="personas">
+        <div class="highlights">
             <div class="inner-panel">
                 <div class="item">
                     <a href="/">
@@ -277,7 +279,7 @@
                 </div>
             </div>
         </div><!-- personas -->
-        <div class="highlights">
+        <div class="custom_slider">
             <div class="title-cont">
                 <h2>Things to Do</h2>
             </div>
@@ -357,7 +359,7 @@
             <a href="/" class="view-all">See all things to do</a>
             <script>
                 $(document).ready(function(){
-                    var root = $(".highlights");
+                    var root = $(".custom_slider");
                     var slider = root.find(".slider");
                     var arrows = slider.find(".arrow-cont");
 
@@ -396,7 +398,7 @@
                 });
             </script> 
         </div><!-- highlights -->
-        <div class="banner">
+        <div class="billboard">
             <div class="img-cont">
                 <picture>
                     <source srcset="includes/public/assets/images/banner.png" media="(min-width: 641px)">
@@ -408,7 +410,7 @@
                 <a href="/">Explore packages</a>
             </div>
         </div><!-- banner -->
-        <div class="imgbox-grid">
+        <div class="tiles">
             <div class="title-cont">
                 <h2>Island Experiences</h2>
                 <p>
@@ -416,7 +418,7 @@
                 </p>
             </div>
             <div class="inner-panel">
-                <div class="grid-item">
+                <div class="tile">
                     <a href="/">
                         <img src="includes/public/assets/images/imgbox-grid.png" alt="">
                     </a>
@@ -427,7 +429,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="grid-item">
+                <div class="tile">
                     <a href="/">
                         <img src="includes/public/assets/images/imgbox-grid.png" alt="">
                     </a>
@@ -439,7 +441,7 @@
                     </div>
                 </div>
             </div>
-        </div><!-- imgbox grid -->
+        </div><!-- tiles -->
         <div class="callout">
             <h4 class="title">
                 <span class="title1">ready for</span>
@@ -464,7 +466,6 @@
                 .social-panel {
                     margin: 0 auto 30px;
                     width: 100%;
-                    max-width: 1440px;
                 }
                 .social-panel .title-cont {
                     padding: 0 20px 15px;
@@ -506,7 +507,7 @@
             <img style="display:block;width:100%;" class="show-for-small-only" src="includes/public/assets/images/social-sm.png" alt="">
             <img style="display:block;width:100%;" class="hide-for-small-only" src="includes/public/assets/images/social.png" alt="">
         </div><!-- social panel -->
-        <div class="accolade">
+        <div class="award-widget">
             <div class="badge">
                 <img src="includes/public/assets/images/badge.png" alt="">
             </div>
@@ -515,7 +516,7 @@
                 <h3>best california island experience</h3>
                 <span>By Name of Travel Authority</span>
             </div>
-        </div><!-- accolade -->
+        </div><!-- award widget -->
     </section>
 
     <!-- /////  FOOTER INCLUDE  ////// -->
