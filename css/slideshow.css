@@ -9,8 +9,8 @@
 }
 
 .header-slideshow .home-header .custom-arrow {
-    width: 48px;
-    height: 48px;
+    width: 45px;
+    height: 45px;
     border-radius: 100%;
     border: 1px solid white;
     display: flex;
@@ -93,7 +93,7 @@
     color: white;
     margin: 0;
     font-size: 15px;
-    line-height: 18px;
+    line-height: 15px;
     text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
 }
 

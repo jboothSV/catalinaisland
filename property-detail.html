@@ -8,8 +8,8 @@
     <link rel="icon" href="includes/public/assets/images/favicon.ico" type="image/x-icon">
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/themes/smoothness/jquery-ui.css" rel="stylesheet">
     <link href="css/foundation.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.8/slick-theme.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css" />
     <link href="css/shared.css" rel="stylesheet" type="text/css">
     <link href="css/search.css" rel="stylesheet" type="text/css">
     <link href="css/slideshow.css" rel="stylesheet" type="text/css">
@@ -26,229 +26,401 @@
     <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/foundation.min.js"></script>
-    <script type="text/javascript"  src="js/foundation.reveal.js"></script>
+    <script type="text/javascript" src="js/foundation.reveal.js"></script>
     <script type="text/javascript" src="js/foundation.equalizer.js"></script>
     <script type="text/javascript" src="js/jquery.onscreen.js"></script>
 
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
 
     <!-- CUSTOM FONTS CODE -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Roboto+Condensed:700" rel="stylesheet">
 </head>
-<body>  
-        <!-- ///// HEADER INCLUDE ///// -->
-        <div w3-include-html="header.html"></div>
-        <!-- ////// HEADER SLIDESHOW //////// -->
-        <div class="header-slideshow">
-            <div class="home-header">
-                <div class="item">
-                    <div class="img-cont">
-                        <picture>
-                            <source srcset="includes/public/assets/images/interior-slideshow.png" media="(min-width: 641px)">
-                            <img src="includes/public/assets/images/homeslide-sm.png" alt="">
-                        </picture>
-                    </div>
-                    <div class="slide-content">
-                        <h2>Relax and rejuvenate</h2>
-                        <p class="desc">
-                            at Catalina's only experiential spa. <a href="/">Learn more</a>
-                        </p>
-                    </div>
+
+<body>
+    <!-- ///// HEADER INCLUDE ///// -->
+    <div w3-include-html="header.html"></div>
+    <!-- ////// HEADER SLIDESHOW //////// -->
+    <div class="header-slideshow">
+        <div class="home-header">
+            <div class="item">
+                <div class="img-cont">
+                    <picture>
+                        <source srcset="includes/public/assets/images/interior-slideshow.png"
+                            media="(min-width: 641px)">
+                        <img src="includes/public/assets/images/homeslide-sm.png" alt="">
+                    </picture>
+                </div>
+                <div class="slide-content">
+                    <h2>Book now at Pavilion Hotel</h2>
+                    <p class="desc">
+                        Just 14 steps from the beach. <a href="/">Learn more</a>
+                    </p>
                 </div>
             </div>
         </div>
+    </div>
 
-        <section class="content">
-            <div class="booking active">
-                <div class="top-section">
-                    <div class="inner">
-                        <div class="title-bar">
-                            <h2>Book Your Trip</h2>
-                            <div class="toggle">
-                                <span class="open">OPEN</span>
-                                <span class="close">CLOSE</span>
-                                <img src="includes/public/assets/images/booking-arrow.png" alt="arrow">
-                            </div>
-                        </div>
-                        <div class="options">
-                            <span class="selected">Hotels</span>
-                            <span>Activities</span>
-                            <span>Moorings</span>
-                            <span>Camping</span>
+    <section class="content">
+        <div class="booking active">
+            <div class="top-section">
+                <div class="inner">
+                    <div class="title-bar">
+                        <h2>Book Your Trip</h2>
+                        <div class="toggle">
+                            <span class="open">OPEN</span>
+                            <span class="close">CLOSE</span>
+                            <img src="includes/public/assets/images/booking-arrow.png" alt="arrow">
                         </div>
                     </div>
+                    <div class="options">
+                        <a href="#" class="selected">Hotels</a>
+                        <a href="#">Activities</a>
+                        <a href="#">Moorings</a>
+                        <a href="#">Camping</a>
+                    </div>
                 </div>
-                <div class="bottom-section">
-                    <form action="/" method="GET" class="booking-form">
-                        <label class="select-label">
-                            Hotel Reservations
-                            <select name="types">
-                                <option value="Value default" selected>Select...</option>
-                                <option value="Value One">Value One</option>
-                                <option value="Value Two">Value Two</option>
-                                <option value="Value Three">Value Three</option>
-                            </select>
-                            <div class="arrow">
-                                <img src="includes/public/assets/images/orange-arrow.png" alt="orange arrow">
+            </div>
+            <div class="bottom-section">
+                <form action="/" method="GET" class="booking-form">
+                    <label class="select-label">
+                        Hotel Reservations
+                        <select name="types">
+                            <option value="Value default" selected>Select...</option>
+                            <option value="Value One">Value One</option>
+                            <option value="Value Two">Value Two</option>
+                            <option value="Value Three">Value Three</option>
+                        </select>
+                        <div class="arrow">
+                            <img src="includes/public/assets/images/orange-arrow.png" alt="orange arrow">
+                        </div>
+                    </label>
+                    <label class="date-label">
+                        Dates
+                        <input type="date">
+                        <div class="overlay">
+                            <i class="far fa-calendar-alt"></i>
+                        </div>
+                    </label>
+                    <label class="number-label">
+                        Rooms
+                        <div class="inner">
+                            <div class="minus">
+                                <i class="fas fa-minus"></i>
                             </div>
-                        </label>
-                        <label class="date-label">
-                            Dates 
-                            <input type="date">
-                            <div class="overlay">
-                                <i class="far fa-calendar-alt"></i>
+                            <input type="text" placeholder="0">
+                            <div class="plus">
+                                <i class="fas fa-plus"></i>
                             </div>
-                        </label>
-                        <label class="number-label">
-                            Rooms
-                            <div class="inner">
-                                <div class="minus">
-                                    <i class="fas fa-minus"></i>
-                                </div>
-                                <input type="text" placeholder="0">
-                                <div class="plus">
-                                    <i class="fas fa-plus"></i>
-                                </div>
+                        </div>
+                    </label>
+                    <label class="number-label center-item">
+                        Adults
+                        <div class="inner">
+                            <div class="minus">
+                                <i class="fas fa-minus"></i>
                             </div>
-                        </label>
-                        <label class="number-label center-item">
-                            Adults
-                            <div class="inner">
-                                <div class="minus">
-                                    <i class="fas fa-minus"></i>
-                                </div>
-                                <input type="text" placeholder="0">
-                                <div class="plus">
-                                    <i class="fas fa-plus"></i>
-                                </div>
+                            <input type="text" placeholder="0">
+                            <div class="plus">
+                                <i class="fas fa-plus"></i>
                             </div>
-                        </label>
-                        <label class="number-label">
-                            Children
-                            <div class="inner">
-                                <div class="minus">
-                                    <i class="fas fa-minus"></i>
-                                </div>
-                                <input type="text" placeholder="0">
-                                <div class="plus">
-                                    <i class="fas fa-plus"></i>
-                                </div>
+                        </div>
+                    </label>
+                    <label class="number-label">
+                        Children
+                        <div class="inner">
+                            <div class="minus">
+                                <i class="fas fa-minus"></i>
                             </div>
-                        </label>
-                        <div class="submit">Check availability</div>
-                    </form>
-                </div>
-                <script>
-                    $(document).ready(function(){
-                        var root = $(".booking");
-                        var toggle = root.find(".toggle");
-                        var form = root.find("form");
-                        var select = root.find("select");
-                        var addVal = root.find(".plus");
-                        var removeVal = root.find(".minus");
-                        var current = 0;
-                        var submit = root.find(".submit");
-                        var opts = root.find(".options");
-                        var body = root.find(".bottom-section");
-                        var opt = opts.find("span");
-    
-                        toggle.on("click", function(){
-                            root.toggleClass("active");
-                            if(root.hasClass("active")){
-                                opts.slideDown(function(){
-                                    body.slideDown()
-                                });
-                            }else{
-                                opts.slideUp(function(){
-                                    body.slideUp();
-                                });
-                            }
-                        });
-    
-                        select.on("click", function(){
-                            $(this).parent().toggleClass("active");
-                        });
-                        select.off("click", function(){
-                            $(this).parent().toggleClass("active");
-                        });
-    
-                        addVal.on("click", function(){
-                            var input = $(this).parent().parent().find("input");
-                            current += 1;
-                            input.val(current);
-                        });
-    
-                        removeVal.on("click", function(){
-                            if(current === 0) {
-                                return;
-                            }
-                            var input = $(this).parent().parent().find("input");
-                            current -= 1;
-                            input.val(current);
-                        });
-    
-                        opt.on("click", function(){
-                            opt.not($(this)).removeClass("selected");
-                            $(this).addClass("selected");
-                        });
-    
-                        submit.on("click", function(){
-                            form.submit();
-                        });
+                            <input type="text" placeholder="0">
+                            <div class="plus">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                    </label>
+                    <div class="submit">Check availability</div>
+                </form>
+            </div>
+            <script>
+                $(document).ready(function () {
+                    var root = $(".booking");
+                    var toggle = root.find(".toggle");
+                    var form = root.find("form");
+                    var select = root.find("select");
+                    var addVal = root.find(".plus");
+                    var removeVal = root.find(".minus");
+                    var current = 0;
+                    var submit = root.find(".submit");
+                    var opts = root.find(".options");
+                    var body = root.find(".bottom-section");
+                    var opt = opts.find("span");
+
+                    toggle.on("click", function () {
+                        root.toggleClass("active");
+                        if (root.hasClass("active")) {
+                            opts.slideDown(function () {
+                                body.slideDown()
+                            });
+                        } else {
+                            opts.slideUp(function () {
+                                body.slideUp();
+                            });
+                        }
                     });
-                </script>
-            </div><!-- booking -->
-        </section><!--body-section-->
-        <div class="intro-panel centered">
-            <h1>Pavilion Hotel</h1>
-            <p>
-                Celebrate romance on Catalina Island. Whether you want to ignite a new spark or rekindle an old flame, this Island Romance Package offers an entire island of possibilities for you to stoke the fires of passion, including a romantic picnic lunch for two with sparkling wine. Book your romantic Catalina getaway today.
-            </p>
-            <a href="/" class="shared-button">check availability</a>
-            <span>or call 877-778-8322</span>
-        </div><!-- intro panel -->
-        <div class="detail-tabs">
-            <a href="#inclusions">inclusions</a>
-            <a href="#map">map &amp; gallery</a>
-            <a href="#offers">special offers</a>
-            <a href="#reviews">reviews</a>
-            <a href="#comments">special offers</a>
-        </div>
 
-        <div class="banner alternate">
-            <div class="img-cont">
-                <picture>
-                    <source srcset="includes/public/assets/images/banner.png" media="(min-width: 641px)">
-                    <img src="includes/public/assets/images/banner-sm.png" alt="">
-                </picture>
+                    select.on("click", function () {
+                        $(this).parent().toggleClass("active");
+                    });
+                    select.off("click", function () {
+                        $(this).parent().toggleClass("active");
+                    });
+
+                    addVal.on("click", function () {
+                        var input = $(this).parent().parent().find("input");
+                        current += 1;
+                        input.val(current);
+                    });
+
+                    removeVal.on("click", function () {
+                        if (current === 0) {
+                            return;
+                        }
+                        var input = $(this).parent().parent().find("input");
+                        current -= 1;
+                        input.val(current);
+                    });
+
+                    opt.on("click", function () {
+                        opt.not($(this)).removeClass("selected");
+                        $(this).addClass("selected");
+                    });
+
+                    submit.on("click", function () {
+                        form.submit();
+                    });
+                });
+            </script>
+        </div><!-- booking -->
+        <div class="intro-panel">
+            <div class="contentRender_name_plugins_core_textbox">
+                <h1>Pavilion Hotel</h1>
+                <p>
+                    Your Catalina adventure starts here. As a featured property of Catalina’s only complete resort services provider, Pavilion Hotel gives you more reasons to stay and more ways to play than any other hotel on the island, and it’s all included with your reservation of any room or suite at one of Avalon’s premier hotel destinations only 14 steps from the beach. Visit us soon at Pavilion Hotel.
+                </p>
+                <a href="/" class="shared-button">check availability</a>
+                <h3>or call 877-778-8322</h3>
             </div>
-            <div class="slide-content">
-                <h2>celebrate romance</h2>
-                <a href="/">book romance package</a>
-                <span>or call 877-778-8322</span>
+        </div><!-- intro panel -->
+        <div class="custom-packages-panel">
+            <div class="detail-tabs">
+                <a href="#inclusions">inclusions</a>
+                <a href="#map">map &amp; gallery</a>
+                <a href="#offers">special offers</a>
+                <a href="#reviews">reviews</a>
+                <a href="#comments">comments</a>
+            </div><!-- tabs -->
+            <div class="inner-container">
+                <div class="title-cont">
+                    <a href="#inclusions">
+                        <h2>your stay includes:</h2>
+                    </a>
+                </div>
+                <div class="two-col">
+                    <div class="left-col">
+                        <div class="contentRender_name_plugins_core_textbox">
+                            <h4>accomodations</h4>
+                            <ul>
+                                <li>Island chick accomodations for two at the Pavilion Hotel only steps from the beach
+                                </li>
+                                <li>Picnic basket lunch for two with sparkling wine</li>
+                                <li>Hot breakfast with build-your-own omelette bar</li>
+                                <li>Evening wine &amp; cheese receptions</li>
+                                <li>Lunch and dinner delivery options</li>
+                                <li>Beach towels and access to Descano Beach Club</li>
+                                <li>Use of a bicycle during your stay</li>
+                                <li>Personalized concierge and luggage service</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-col">
+                        <div class="contentRender_name_plugins_core_textbox">
+                            <h4>activities</h4>
+                            <ul>
+                                <li>Island Spa Catalina day pass per adult</li>
+                                <li>Avalon Scenic Drive and Cyclone Seal Rocks Safari</li>
+                                <li>Round-trip for two on Catalina Express or Catalina Flyer</li>
+                                <li>15-minute island tour for two with Island Express Helicopters</li>
+                            </ul>
+                            <hr>
+                            <p>
+                                Please note:<br>
+                                A destination fee of $25 per room, per night will be applied
+                                to your reservation at check out.
+                            </p>
+                            <p>
+                                Helicopter Tour of the Island via Island Express Helicopters is not private and may
+                                include other passengers. Based on availability at time of booking. Not valid with any
+                                other offer. Promotion not valid for groups. For group rates, please contact our Group
+                                Sales department: groupsales@scico.com.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div><!-- banner -->
-            
-        <!-- /////  FOOTER INCLUDE  ////// -->
+            <div class="detail-map">
+                <img style="display:block;width:100%;" class="show-for-small-only" src="includes/public/assets/images/map-sm.png" alt="">
+                <img style="display:block;width:100%;" class="hide-for-small-only" src="includes/public/assets/images/map.png" alt="">
+                <div class="toggle-map">
+                    expand map
+                </div>
+            </div><!-- detail map -->
+            <div class="detail-gallery">
+                <div class="item" style="background:url('includes/public/assets/images/gallery-lg.png')center/cover no-repeat;"></div>
+                <div class="item" style="background:url('includes/public/assets/images/gallery-sm.png')center/cover no-repeat;"></div>
+                <div class="item" style="background:url('includes/public/assets/images/gallery-sm.png')center/cover no-repeat;"></div>
+                <div class="item" style="background:url('includes/public/assets/images/gallery-sm.png')center/cover no-repeat;"></div>
+                <div class="item total-items">
+                    <a href="/">view gallery <i class="fas fa-angle-right"></i></a>
+                    <div class="totals">
+                        <span>1 video</span>
+                        <span>18 photos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-panel" style="background-color:#def5f8;">
+                <div class="carousel">
+                    <div class="carousel-title-cont">
+                        <h2>packages &amp; special offers</h2>
+                    </div>
+                    <div class="dots-cont"></div>
+                    <div class="slider">
+                        <div class="arrow-cont"></div>
+                        <div class="item">
+                            <img src="includes/public/assets/images/feat-slider.png" alt="">
+                            <div class="slide-content">
+                                <h5>Boat &amp; Hotel Package</h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
+                                </p>
+                                <span class="link">
+                                    <a href="/">Learn More</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="includes/public/assets/images/feat-slider.png" alt="">
+                            <div class="slide-content">
+                                <h5>Boat &amp; Hotel Package</h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
+                                </p>
+                                <span class="link">
+                                    <a href="/">Learn More</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="includes/public/assets/images/feat-slider.png" alt="">
+                            <div class="slide-content">
+                                <h5>Helicopter &amp; Hotel Package</h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
+                                </p>
+                                <span class="link">
+                                    <a href="/">Learn More</a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="includes/public/assets/images/feat-slider.png" alt="">
+                            <div class="slide-content">
+                                <h5>Boat &amp; Hotel Package</h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...
+                                </p>
+                                <span class="link">
+                                    <a href="/">Learn More</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        $(document).ready(function () {
+                            var root = $(".carousel");
+                            var slider = root.find(".slider");
+                            var arrows = root.find(".arrow-cont");
+                            var dotCont = root.find(".dots-cont");
+    
+                            slider.slick({
+                                infinite: true,
+                                arrows: true,
+                                dots: true,
+                                appendDots: dotCont,
+                                prevArrow: '<div class="custom-arrow prev"><img src="includes/public/assets/images/homeslide-arrow.png" alt="arrow"></div>',
+                                nextArrow: '<div class="custom-arrow next"><img src="includes/public/assets/images/homeslide-arrow.png" alt="arrow"></div>',
+                                appendArrows: arrows,
+                                slide: ".item",
+                                slidesToShow: 3,
+                                responsive: [
+                                    {
+                                        breakpoint: 1024,
+                                        settings: {
+                                            slidesToShow: 2
+                                        }
+                                    },
+                                    {
+                                        breakpoint: 640,
+                                        settings: {
+                                            slidesToShow: 1
+                                        }
+                                    }
+                                ]
+                            });
+    
+                            $(window).on('resize orientationchange', function () {
+                                slider.slick('resize');
+                            });
+    
+                        });
+                    </script>
+                </div><!-- carousel -->
+            </div><!-- bg panel -->
+            <div class="drawer">
+                <div class="inner">
+                    <i class="fas fa-angle-down"></i>
+                    <h2>reviews</h2>
+                </div>
+            </div><!-- drawer -->
+            <div class="drawer">
+                <div class="inner">
+                    <i class="fas fa-angle-down"></i>
+                    <h2>comments</h2>
+                </div>
+            </div><!-- drawer -->
+        </div><!-- packages panel -->
+    </section>
+    <!--body-section-->
+    <!-- /////  FOOTER INCLUDE  ////// -->
     <div w3-include-html="footer.html"></div>
 
-<!-- !!!!!!!!!!!! DO NOT USE THIS FILE FOR SHELL SETUP !!!!!!!!!!!! -->
-<script type="text/javascript" src="js/w3.js"></script>
-<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <!-- !!!!!!!!!!!! DO NOT USE THIS FILE FOR SHELL SETUP !!!!!!!!!!!! -->
+    <script type="text/javascript" src="js/w3.js"></script>
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
-<script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
 
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("body").on("click", "[data-open-primarysearch]", function(){
-            $(".primary-search").parent().addClass("active");
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("body").on("click", "[data-open-primarysearch]", function () {
+                $(".primary-search").parent().addClass("active");
+            });
+            $("body").on("click", "[data-close-primarysearch]", function (e) {
+                e.stopPropagation();
+                $(".primary-search").parent().removeClass("active");
+            });
         });
-        $("body").on("click", "[data-close-primarysearch]", function(e){
-            e.stopPropagation();
-            $(".primary-search").parent().removeClass("active");
-        });
-    });
-</script>
+    </script>
 
 </body>
+
 </html>

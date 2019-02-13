@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 15px;
+    padding: 18px 15px;
     background-color: #00d9ec;
 }
 
@@ -71,7 +71,7 @@
     background-color: #f2f2f2;
 }
 
-.booking .options a {
+.booking .options .booking-option {
     position: relative;
     display: inline-block;
     padding: 0 5px;
@@ -80,7 +80,7 @@
     font-weight: inherit;
 }
 
-.booking .options a.selected::after {
+.booking .options .booking-option.selected::after {
     content: "";
     position: absolute;
     bottom: -5px;
@@ -287,6 +287,9 @@
     .booking .options {
         background-color: transparent;
     }
+    .booking .options .booking-option {
+        margin-right: 15px;
+    }
 }
 
 @media (min-width: 1025px) {
@@ -350,7 +353,7 @@
         margin-right: 25px;
         cursor: pointer;
     }
-    .booking .options a.selected::after {
+    .booking .options .booking-option.selected::after {
         bottom: -10px;
         height: 4px;
     }
@@ -359,5 +362,9 @@
     }
     .booking .date-label .overlay {
         width: 50px;
+    }
+    .booking .title-bar h2 {
+        font-size: 36px;
+        line-height: 38px;
     }
 }

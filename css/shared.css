@@ -238,16 +238,28 @@ ul, ol, dl {
 
 .shared-button,
 a.shared-button {
-    width: 100%;
+    display: inline-block;
+    width: auto;
     padding: 10px 20px;
     text-align: center;
     border-radius: 25px;
     background-color: #ff8200;
     color: #003b4a;
     font-size: 17px;
+    line-height: 20px;
     font-weight: 600;
     text-transform: uppercase;
     margin: 0 auto;
+}
+
+.bg-panel {
+    padding-top: 25px;
+}
+
+@media (min-width: 1025px) {
+    .bg-panel {
+        padding-top: 75px;
+    }
 }
 
 /*
@@ -329,6 +341,10 @@ a.shared-button {
     font-weight: 600;
 }
 
+.header-section .mobilenav .weather-cont {
+    font-size: 15px;
+}
+
 .header-section .weather-cont a {
     font-size: inherit;
     color: inherit;
@@ -388,9 +404,11 @@ a.shared-button {
     .header-section .top-header .cta-button {
         font-size: 17px;
     }
-    .header-section .top-header .weather-cont,
-    .header-section .top-header .cta-button {
+    .header-section .top-header .weather-cont {
         margin-right: 35px;
+    }
+    .header-section .top-header .cta-button {
+        margin-right: 50px;
     }
 }
 
@@ -512,7 +530,7 @@ a.shared-button {
 }
 
 .footer-bottom {
-    padding: 35px 15px;
+    padding: 35px 15px 20px;
     background-color: #003a48;
     text-align: center;
     overflow-x: hidden;

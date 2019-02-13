@@ -1,5 +1,5 @@
 .highlights {
-    margin-bottom: 45px;
+    margin-bottom: 35px;
     overflow: hidden;
 }
 
@@ -69,17 +69,9 @@
         width: 100%;
         margin: 0 auto 50px;
     }
-    .highlights .inner-panel {
-        min-height: 1000px;
-    }
     .highlights .item .img-cont {
         height: 100%;
-        padding-bottom: 50%;
-    }
-    @supports(display: grid) {
-        .highlights .item .img-cont {
-            padding: 0;
-        }
+        padding-bottom: 45%;
     }
     .highlights .item:first-child {
         width: calc(60% - 6px);
@@ -97,8 +89,8 @@
         padding: 20px 60px;
     }
     .highlights .item .title h2 {
-        font-size: 46px;
-        line-height: 50px;
+        font-size: 28px;
+        line-height: 30px;
         margin: 0 15px 0 0;
     }
     .highlights .item .title img {
@@ -115,7 +107,7 @@
 }
 
 .custom_slider .title-cont {
-    padding: 0 15px 15px;
+    padding: 0 15px 10px;
     text-align: center;
 }
 
@@ -123,8 +115,8 @@
     font-family: 'Roboto Condensed', Arial Narrow, sans-serif;
     margin: 0;
     text-transform: none;
-    font-size: 50px;
-    line-height: 56px;
+    font-size: 48px;
+    line-height: 54px;
 }
 
 .custom_slider .view-all {
@@ -240,7 +232,20 @@
         margin: 0 -4px;
     }
     .custom_slider .item {
+        position: relative;
         margin: 0 4px;
+    }
+    .custom_slider .item::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #003a48;
+        transition: opacity 0.75s;
+        opacity: 0;
+        z-index: 1;
     }
     .custom_slider .item .slide-content {
         position: absolute;
@@ -248,8 +253,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 1;
-        transition: all 0.6s;
+        z-index: 2;
+        transition: transform 0.5s;
         transform: translateY(100%);
     }
     .custom_slider .item .slide-content p, 
@@ -273,11 +278,10 @@
     .custom_slider .item .slide-content .title-cont {
         padding: 17px 70px;
         background-color: transparent;
-        transition: all 0.6s;
+        transition: transform 0.5s;
         transform: translateY(-100%);
     }
-    .custom_slider .item .slide-content .title-cont::after,
-    .custom_slider .item .slide-content::after {
+    .custom_slider .item .slide-content .title-cont::after {
         content: "";
         position: absolute;
         top: 0;
@@ -287,16 +291,17 @@
         background-color: #00a9dd;
         opacity: 0.75;
         z-index: -1;
-        transition: all 0.3s;
+        transition: opacity 0.2s 0.4s;
     }
     .custom_slider .item:hover .slide-content .title-cont::after {
+        transition: opacity 0.1s;
         opacity: 0;
     }
-    .custom_slider .item:hover .slide-content::after {
-        background-color: rgba(0, 58, 72, 0.85);
+    .custom_slider .item:hover::after {
+        opacity: 0.7;
     }
     .custom_slider .item:hover .slide-content {
-        transform: translateY(0);
+        transform: translateY(7%);
     }
     .custom_slider .item:hover .slide-content .title-cont {
         transform: translateY(0);
@@ -381,7 +386,7 @@
     text-shadow: 2px 2px 2px rgba(0,0,0,0.25);
     text-align: center;
     margin: 0;
-    font-size: 44px;
+    font-size: 46px;
     text-transform: none;
     line-height: 56px;
 }
@@ -394,7 +399,7 @@
     border-radius: 22px;
     text-align: center;
     color: #003a48;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 18px;
 }
 
@@ -431,7 +436,7 @@
 }
 
 .tiles .title-cont {
-    padding: 30px 40px 15px;
+    padding: 15px 40px;
     text-align: center;
 }
 
@@ -451,6 +456,7 @@
 
 .tiles .title-cont p a {
     line-height: 22px;
+    color: #00a9dd;
 }
 
 .tiles .inner-panel {
@@ -476,9 +482,9 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    padding: 15px;
+    padding: 15px 15px 25px;
     text-align: center;
     pointer-events: none;
 }
@@ -488,20 +494,17 @@
     line-height: 34px;
     color: white;
     margin: 0;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.15), -2px -2px 6px rgba(0,0,0,0.15);
 }
 
 .tiles .tile .slide-content .link {
     display: inline-block;
-    margin: 15px auto 0;
-    padding: 13px 40px;
+    margin: 20px auto 0;
+    padding: 13px 60px;
     background-color: #ff8200;
     border-radius: 22px;
     text-align: center;
     color: #003a48;
-}
-
-.tiles .tile .slide-content .link a {
-    color: inherit;
     line-height: 18px;
 }
 
@@ -582,8 +585,8 @@
     border-radius: 22px;
     text-align: center;
     color: #003a48;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 22px;
+    line-height: 19px;
     text-transform: uppercase;
 }
 
@@ -618,7 +621,7 @@
     position: relative;
     width: 100%;
     margin: 0 auto 30px;
-    padding-bottom: 115%;
+    padding-bottom: 135%;
     overflow: hidden;
 }
 
@@ -832,7 +835,16 @@
     position: relative;
     width: 100%;
     max-width: 1570px;
-    margin: 0 auto 30px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.carousel .carousel-title-cont {
+    padding: 0 15px 20px;
+}
+
+.carousel .carousel-title-cont h2 {
+    margin: 0;
 }
 
 .carousel .arrow-cont {
@@ -930,8 +942,14 @@
 
 @media (min-width: 1025px) {
     .carousel {
-        margin: 0 auto 70px;
-        padding-bottom: 40px;
+        margin: 0 auto;
+        padding-bottom: 100px;
+    }
+    .carousel .title-cont {
+        padding: 0 45px 30px;
+    }
+    .carousel .title-cont h2 {
+        font-size: 48px;
     }
     .carousel .slider {
         padding: 0 25px;
@@ -979,6 +997,10 @@
         list-style: none;
         margin: 0;
     }
+    .bg-panel .carousel ul.slick-dots {
+        height: 60px;
+        align-items: flex-start;
+    }
     .carousel ul.slick-dots li {
         position: relative;
         top: 50%;
@@ -996,8 +1018,20 @@
         border-radius: 50%;
         vertical-align: top;
     }
+    .bg-panel .carousel ul.slick-dots li button {
+        border: none;
+        width: 11px;
+        height: 11px;
+    }
     .carousel ul.slick-dots li.slick-active button {
         background-color: #003a48 !important;
+    }
+    .carousel .carousel-title-cont {
+        padding: 0 65px 35px;
+    }
+    .carousel .carousel-title-cont h2 {
+        font-size: 48px;
+        line-height: 55px;
     }
 }
 
@@ -1007,12 +1041,13 @@
     width: 100%;
     position: relative;
     z-index: 2;
+    margin: 0 0 30px;
 }
 
 .feat-content-banner::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
     height: 55%;
@@ -1029,7 +1064,7 @@
 .feat-content-banner .slide-content {
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -1046,7 +1081,7 @@
     font-size: 30px;
     line-height: 30px;
     margin: 0 0 15px;
-    text-shadow: 3px 3px 11px rgba(0,0,0,0.25), -3px -3px 11px rgba(0,0,0,0.25);
+    text-shadow: 3px 3px 11px rgba(0,0,0,0.15), -3px -3px 11px rgba(0,0,0,0.15);
     color: white;
 }
 
@@ -1069,4 +1104,29 @@
     font-weight: 600;
     line-height: 24px;
     text-transform: uppercase;
+}
+
+@media (min-width: 1025px) {
+    .feat-content-banner {
+        margin: 0 0 60px;
+    }
+    .feat-content-banner .slide-content {
+        width: 40%;
+        padding: 60px;
+    }
+    .feat-content-banner .slide-content h2 {
+        font-size: 52px;
+        line-height: 62px;
+        margin: 0 0 45px;
+    }
+    .feat-content-banner::after {
+        height: 30%;
+    }
+    .feat-content-banner .slide-content .slide-link {
+        font-size: 19px;
+        padding: 10px 25px;
+    }
+    .feat-content-banner .slide-content h4 {
+        font-size: 20px;
+    }
 }

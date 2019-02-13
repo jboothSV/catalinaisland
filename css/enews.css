@@ -58,7 +58,7 @@
 }
 
 .enews ::-webkit-input-placeholder {
-    color: #003a48;
+    color: #006d7f;
     font-size: 14px;
     opacity: 1;
     font-weight: 600;
@@ -66,7 +66,7 @@
 
 .enews :-moz-placeholder {
     /* Firefox 18- */
-    color: #003a48;
+    color: #006d7f;
     font-size: 14px;
     opacity: 1;
     font-weight: 600;
@@ -74,14 +74,14 @@
 
 .enews ::-moz-placeholder {
     /* Firefox 19+ */
-    color: #003a48;
+    color: #006d7f;
     font-size: 14px;
     opacity: 1;
     font-weight: 600;
 }
 
 .enews :-ms-input-placeholder {
-    color: #003a48;
+    color: #006d7f;
     font-size: 14px;
     opacity: 1;
     font-weight: 600;
