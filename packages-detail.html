@@ -74,10 +74,10 @@
                         </div>
                     </div>
                     <div class="options">
-                        <a href="#" class="selected">Hotels</a>
-                        <a href="#">Activities</a>
-                        <a href="#">Moorings</a>
-                        <a href="#">Camping</a>
+                        <span class="booking-option selected" href="#">Hotels</span>
+                        <span class="booking-option" href="#">Activities</span>
+                        <a class="booking-option" href="#">Moorings</a>
+                        <span class="booking-option" href="#">Camping</span>
                     </div>
                 </div>
             </div>
@@ -96,7 +96,7 @@
                         </div>
                     </label>
                     <label class="date-label">
-                        Dates
+                        Dates 
                         <input type="date">
                         <div class="overlay">
                             <i class="far fa-calendar-alt"></i>
@@ -142,7 +142,7 @@
                 </form>
             </div>
             <script>
-                $(document).ready(function () {
+                $(document).ready(function(){
                     var root = $(".booking");
                     var toggle = root.find(".toggle");
                     var form = root.find("form");
@@ -155,34 +155,34 @@
                     var body = root.find(".bottom-section");
                     var opt = opts.find("span");
 
-                    toggle.on("click", function () {
+                    toggle.on("click", function(){
                         root.toggleClass("active");
-                        if (root.hasClass("active")) {
-                            opts.slideDown(function () {
+                        if(root.hasClass("active")){
+                            opts.slideDown(function(){
                                 body.slideDown()
                             });
-                        } else {
-                            opts.slideUp(function () {
+                        }else{
+                            opts.slideUp(function(){
                                 body.slideUp();
                             });
                         }
                     });
 
-                    select.on("click", function () {
+                    select.on("click", function(){
                         $(this).parent().toggleClass("active");
                     });
-                    select.off("click", function () {
+                    select.off("click", function(){
                         $(this).parent().toggleClass("active");
                     });
 
-                    addVal.on("click", function () {
+                    addVal.on("click", function(){
                         var input = $(this).parent().parent().find("input");
                         current += 1;
                         input.val(current);
                     });
 
-                    removeVal.on("click", function () {
-                        if (current === 0) {
+                    removeVal.on("click", function(){
+                        if(current === 0) {
                             return;
                         }
                         var input = $(this).parent().parent().find("input");
@@ -190,12 +190,12 @@
                         input.val(current);
                     });
 
-                    opt.on("click", function () {
+                    opt.on("click", function(){
                         opt.not($(this)).removeClass("selected");
                         $(this).addClass("selected");
                     });
 
-                    submit.on("click", function () {
+                    submit.on("click", function(){
                         form.submit();
                     });
                 });
@@ -221,10 +221,9 @@
                 <a href="#comments">comments</a>
             </div><!-- tabs -->
             <div class="inner-container">
-                <div class="title-cont">
-                    <a href="#inclusions">
-                        <h2>your package includes:</h2>
-                    </a>
+                <div class="title-container">
+                    <a name="inclusions"></a>
+                    <h2>your package includes:</h2>
                 </div>
                 <div class="two-col">
                     <div class="left-col">
@@ -247,10 +246,10 @@
                         <div class="contentRender_name_plugins_core_textbox">
                             <h4>activities</h4>
                             <ul>
-                                <li>Island Spa Catalina day pass per adult</li>
-                                <li>Avalon Scenic Drive and Cyclone Seal Rocks Safari</li>
-                                <li>Round-trip for two on Catalina Express or Catalina Flyer</li>
-                                <li>15-minute island tour for two with Island Express Helicopters</li>
+                                <li><b>Island Spa Catalina</b> day pass per adult</li>
+                                <li><b>Avalon Scenic Drive</b> and <b>Cyclone Seal Rocks Safari</b></li>
+                                <li>Round-trip for two on <b>Catalina Express</b> or <b>Catalina Flyer</b></li>
+                                <li>15-minute island tour for two with <b>Island Express Helicopters</b></li>
                             </ul>
                             <hr>
                             <p>
@@ -269,6 +268,7 @@
                 </div>
             </div>
             <div class="feat-content-banner">
+                <a name="related"></a>
                 <div class="img-cont">
                     <picture>
                         <source srcset="includes/public/assets/images/feat-banner.png" media="(min-width: 641px)">
@@ -365,12 +365,15 @@
                     });
                 </script>
             </div><!-- carousel -->
-            <div class="drawer">
-                <div class="inner">
-                    <i class="fas fa-angle-down"></i>
-                    <h2>comments</h2>
+            <div class="drawers">
+                <div class="drawer">
+                    <a name="comments"></a>
+                    <div class="inner">
+                        <i class="fas fa-angle-down"></i>
+                        <h2>comments</h2>
+                    </div>
                 </div>
-            </div><!-- drawer -->
+            </div><!-- drawers -->
         </div><!-- packages panel -->
     </section>
     <!--body-section-->

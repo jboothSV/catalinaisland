@@ -59,8 +59,8 @@
         margin: 0 -3px;
     }
     .highlights .item {
-        margin: 0 3px 6px;
-        width: calc(50% - 6px);
+        margin: 0 4px 8px;
+        width: calc(50% - 8px);
     }
 }
 
@@ -71,19 +71,19 @@
     }
     .highlights .item .img-cont {
         height: 100%;
-        padding-bottom: 45%;
+        padding-bottom: 55%;
     }
     .highlights .item:first-child {
-        width: calc(60% - 6px);
+        width: calc(60% - 8px);
     }
     .highlights .item:nth-child(2) {
-        width: calc(40% - 6px);
+        width: calc(40% - 8px);
     }
     .highlights .item:nth-child(3) {
-        width: calc(70% - 6px);
+        width: calc(70% - 8px);
     }
     .highlights .item:last-child {
-        width: calc(30% - 6px);
+        width: calc(30% - 8px);
     }
     .highlights .item .title {
         padding: 20px 60px;
@@ -192,7 +192,7 @@
 
 .custom_slider .item .title-cont {
     position: relative;
-    padding: 20px 30px;
+    padding: 10px 30px;
     background-color: #00a9dd;
     z-index: 1;
 }
@@ -226,7 +226,12 @@
 
 @media (min-width: 1025px) {
     .custom_slider {
-        margin: 0 auto 60px;
+        margin: 0 auto 70px;
+    }
+    .custom_slider .title-cont h2 {
+        font-size: 82px;
+        line-height: 88px;
+        margin: 0 0 10px;
     }
     .custom_slider .slider {
         margin: 0 -4px;
@@ -269,7 +274,7 @@
     .custom_slider .item .slide-content a {
         display: inline-block;
         margin: 0 auto;
-        padding: 8px 30px;
+        padding: 8px 36px;
         background-color: #ff8200;
         border-radius: 22px;
         text-align: center;
@@ -307,7 +312,7 @@
         transform: translateY(0);
     }
     .custom_slider .item .slide-content h3 {
-        font-size: 22px;
+        font-size: 26px;
         font-weight: 600;
     }
     .custom_slider .slider .arrow-cont {
@@ -347,7 +352,8 @@
         background-color: #003a48 !important;
     }
     .custom_slider .view-all {
-        padding: 10px 30px;
+        padding: 12px 36px;
+        font-size: 19px;
     }
 }
 
@@ -370,7 +376,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    max-width: 675px;
+    max-width: 830px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -383,12 +389,13 @@
 .billboard .slide-content h2 {
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.25);
     text-align: center;
     margin: 0;
     font-size: 46px;
     text-transform: none;
     line-height: 56px;
+    width: 100%;
 }
 
 .billboard .slide-content a {
@@ -414,14 +421,16 @@
         margin: 0 auto 60px;
     }
     .billboard .slide-content a {
-        padding: 10px 30px;
+        padding: 15px 45px;
+        font-size: 19px;
     }
     .billboard .slide-content {
-        padding: 70px;
+        padding: 85px;
     }
     .billboard .slide-content h2 {
-        font-size: 62px;
-        line-height: 80px;
+        font-size: 80px;
+        line-height: 90px;
+        margin: 0 0 55px;
     }
 }
 
@@ -457,6 +466,7 @@
 .tiles .title-cont p a {
     line-height: 22px;
     color: #00a9dd;
+    font-weight: normal;
 }
 
 .tiles .inner-panel {
@@ -516,30 +526,39 @@
     .tiles .inner-panel {
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: center;
         margin: 0 -3px;
     }
     .tiles .tile {
-        margin: 6px 3px 0;
-        width: calc(50% - 6px);
+        margin: 8px 4px 0;
+        width: calc(50% - 8px);
     }
     .tiles .title-cont {
         padding: 0 15px 25px;
     }
     .tiles .title-cont h2 {
-        font-size: 64px;
-        line-height: 72px;
-        margin: 0 0 10px;
+        font-size: 80px;
+        line-height: 90px;
+        margin: 0 0 20px;
     }
 }
 
 @media (min-width: 1025px) {
+    .tiles .tile .slide-content {
+        padding: 15px 15px 10%;
+    }
     .tiles .tile .slide-content h3 {
-        font-size: 44px;
+        font-size: 52px;
         line-height: 64px;
-        margin: 0 0 30px;
+        margin: 0 0 25px;
     }
     .tiles .tile .slide-content .link {
         padding: 15px 60px;
+        font-size: 21px;
+    }
+    .tiles .title-cont p,
+    .tiles .title-cont p a {
+        font-size: 18px;
     }
 }
 
@@ -592,8 +611,8 @@
 
 @media (min-width: 1025px) {
     .callout {
-        padding: 65px 15px;
-        margin: 6px auto 0;
+        padding: 75px 15px;
+        margin: 8px auto 0;
     }
     .callout .title {
         width: 100%;
@@ -602,16 +621,16 @@
         margin: 0 auto;
     }
     .callout .title1 {
-        font-size: 32px;
+        font-size: 34px;
         line-height: 38px;
     }
     .callout .title2 {
-        font-size: 44px;
-        line-height: 52px;
+        font-size: 50px;
+        line-height: 58px;
     }
     .callout a {
-        font-size: 21px;
-        line-height: 23px;
+        font-size: 26px;
+        line-height: 26px;
     }
 }
 
@@ -662,7 +681,7 @@
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
     margin: 0 0 10px;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 12px rgba(0,0,0,0.2);
     font-size: 44px;
     line-height: 48px;
     text-transform: none;
@@ -689,6 +708,7 @@
 .map-widget .map-content a {
     color: inherit;
     line-height: inherit;
+    font-size: inherit;
 }
 
 @media (min-width: 641px) {
@@ -709,25 +729,26 @@
 
 @media (min-width: 1025px) {
     .map-widget {
-        padding-bottom: 33%;
+        padding-bottom: 38%;
         margin: 0 auto 70px;
     }
     .map-widget .map-content {
-        width: 35%;
+        width: 45%;
         align-items: center;
     }
     .map-widget .map-cont {
         width: 65%;
         left: auto;
-        right: 0;
+        right: 10%;
         height: 100%;
     }
     .map-widget .map-content .link {
         margin: 25px auto 0;
+        font-size: 20px;
     }
     .map-widget .map-content h2 {
-        font-size: 66px;
-        line-height: 80px;
+        font-size: 78px;
+        line-height: 84px;
         margin: 0 0 20px;    
     }
 }
@@ -799,7 +820,7 @@
 
 @media (min-width: 1025px) {
     .award-widget {
-        padding: 30px 15px;
+        padding: 50px 15px;
         margin: 0 auto 70px;
     }
     .award-widget::after,
@@ -823,8 +844,8 @@
         font-size: 22px;
     }
     .award-widget .slide-content h3 {
-        font-size: 46px;
-        line-height: 52px;
+        font-size: 50px;
+        line-height: 60px;
         margin-bottom: 15px;
     }
 }
@@ -840,7 +861,7 @@
 }
 
 .carousel .carousel-title-cont {
-    padding: 0 15px 20px;
+    padding: 0 15px 10px;
 }
 
 .carousel .carousel-title-cont h2 {
@@ -878,11 +899,20 @@
 }
 
 .carousel .arrow-cont .custom-arrow.prev {
-    left: 5px;
+    left: 15px;
 }
 
 .carousel .arrow-cont .custom-arrow.next {
-    right: 5px;
+    right: 15px;
+}
+
+.carousel .title-cont {
+    padding: 0 15px 15px;
+}
+
+.carousel .title-cont h2 {
+    margin: 0;
+    font-size: 30px;
 }
 
 .carousel ul.slick-dots {
@@ -946,25 +976,21 @@
         padding-bottom: 100px;
     }
     .carousel .title-cont {
-        padding: 0 45px 30px;
+        padding: 0 45px 50px;
     }
     .carousel .title-cont h2 {
-        font-size: 48px;
+        font-size: 54px;
+    }
+    .carousel .arrow-cont .custom-arrow {
+        width: 50px;
+        height: 50px;
     }
     .carousel .slider {
         padding: 0 25px;
         margin: 0 -7px;
     }
     .carousel .arrow-cont {
-        padding-top: 18%;
-    }
-    .feat-slider .arrow-cont .custom-arrow.prev {
-        left: 30px;
-        transform: translateX(-50%);
-    }
-    .carousel .arrow-cont .custom-arrow.next {
-        right: 30px;
-        transform: translateX(50%);
+        padding-top: 22.5%;
     }
     .carousel .item {
         margin: 0 7px;
@@ -973,7 +999,7 @@
         padding: 25px 0 10px;
     }
     .carousel .item .slide-content h5 {
-        font-size: 23px;
+        font-size: 26px;
         line-height: 28px;
         font-weight: 600;
     }
@@ -1081,7 +1107,7 @@
     font-size: 30px;
     line-height: 30px;
     margin: 0 0 15px;
-    text-shadow: 3px 3px 11px rgba(0,0,0,0.15), -3px -3px 11px rgba(0,0,0,0.15);
+    text-shadow: 3px 3px 24px rgba(0,0,0,0.15), -3px -3px 24px rgba(0,0,0,0.15);
     color: white;
 }
 
@@ -1111,8 +1137,8 @@
         margin: 0 0 60px;
     }
     .feat-content-banner .slide-content {
-        width: 40%;
-        padding: 60px;
+        width: 45%;
+        padding: 60px 80px;
     }
     .feat-content-banner .slide-content h2 {
         font-size: 52px;

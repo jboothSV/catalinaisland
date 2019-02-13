@@ -240,7 +240,7 @@ ul, ol, dl {
 a.shared-button {
     display: inline-block;
     width: auto;
-    padding: 10px 20px;
+    padding: 12px 20px;
     text-align: center;
     border-radius: 25px;
     background-color: #ff8200;
@@ -316,6 +316,7 @@ a.shared-button {
 .header-section .toggle-mobile-menu {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .header-section .toggle-mobile-menu .close {
@@ -479,12 +480,12 @@ a.shared-button {
 
 .controlled-width {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1515px;
     margin: 0 auto;
 }
 
 .row {
-	max-width: 1440px;
+	max-width: 1515px;
     margin: 0 auto;
     margin-left: -15px;
     margin-right: -15px;
@@ -493,7 +494,7 @@ a.shared-button {
 
 .contentRender_name_plugins_core_textbox {
     width: 100%;
-    max-width: 1440px;
+    max-width: 1515px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -512,6 +513,12 @@ a.shared-button {
 
 .intro-panel .intro-panel {
     padding: 0;
+}
+
+@media (min-width: 1025px) {
+    .content hr {
+        margin: 25px 0;
+    }
 }
 
 /*
@@ -609,6 +616,9 @@ a.shared-button {
 @media (min-width: 1025px) {
     .footer .footer-top {
         padding: 50px 15px;
+    }
+    .footer-bottom {
+        padding: 50px 15px 40px;
     }
     .footer-bottom .booking-submit {
         margin: 0 auto 40px;
